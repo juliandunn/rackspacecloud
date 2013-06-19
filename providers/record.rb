@@ -20,6 +20,10 @@
 
 include Opscode::Rackspace::DNS
 
+def whyrun_supported?
+  true
+end
+
 action :add do
 
   zone = get_zone(new_resource.name)
